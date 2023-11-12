@@ -1,0 +1,54 @@
+---
+import { AnnouncementBar,Header, Button, Footer } from '@littlesticks/odyssey-theme-components';
+import Layout from './Base.astro';
+import type { Props as BaseHeadProps } from '../components/head/BaseHead.astro';
+import Logo from '../components/Logo.astro';
+import settings from '../config/settings';
+import { footerLists, footerSocials } from '../config/footer';
+
+
+export interface Props {
+	seo?: BaseHeadProps;
+}
+
+import { nav } from '../config/nav.js';
+
+const { seo } = Astro.props as Props;
+---
+
+<Layout seo={seo}>
+<AnnouncementBar text="Solicita tu cita por WhatsApp" href="https://api.whatsapp.com/send?phone=+34654778643&text=Estoy%20interesado%20en%20tener%20una%20sesi%C3%B3n" slot="announcement-bar"/>
+
+	<div id="header">
+		<Header rightMenu navData={nav} slot="header">
+		<span slot="logo">
+			<Logo footer={false} />
+		</span>
+
+		</Header>
+	</div>
+
+	<div id="page">
+		<slot />
+	</div>
+	<Footer
+		slot="footer"
+		background="var(--theme-surface-1)"
+		color="var(--theme-on-surface-1)"
+		footerLists={footerLists}
+   	 	footerSocials={footerSocials}
+		class="footer-center"
+	>
+		<Logo slot="logo" footer />
+	</Footer>
+</Layout>
+<style>
+	.footer-center {
+		display: flex;
+		justify-content: center;
+	}
+	#header {
+		padding: 0 0.5rem;
+		background-color: var(--theme-surface-1);
+	}
+</style>

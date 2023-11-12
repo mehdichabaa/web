@@ -1,0 +1,135 @@
+---
+import {Icon} from 'astro-icon'
+import {
+  AnnouncementBar,
+	Button,
+	CustomerQuoteSection,
+	ThreeColumnTextSection,
+	YouTubeEmbedSection,
+  StickyTextImageSection,
+  CtaCardSection
+} from '@littlesticks/odyssey-theme-components';
+import Layout from '../layouts/Page.astro';
+import TextAndImageHero from '../components/sections/heros/TextAndImageHero.astro';
+import FiveColumnTextSection from '../components/sections/FiveColumnTextSection.astro';
+
+const seo = {
+	title: 'Psicologo Mehdi Chabaa',
+	description: 'Psicología en Málaga',
+};
+---
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	</head>
+
+<Layout seo={seo} >
+	<TextAndImageHero >
+		<div slot="text-container">
+			<h1>Mehdi Chabaa</h1>
+            <h2>Psicólogo en Málaga, experto en Adicciones,
+Ansiedad y Depresión.</h2>
+			<p>Como profesional de la salud mental, mi misión es proporcionar
+las herramientas necesarias y un apoyo integral para mejorar la
+salud mental y el bienestar de las personas que acuden a
+consulta.
+Trabajo mediante terapia personalizada, adaptándome a las
+necesidades específicas de cada paciente. Abordaremos
+dificultades como la ansiedad, depresión, adicciones, autoestima,
+relaciones saludables, duelo y la resolución de problemas
+emocionales</p>
+
+
+        </div>
+		<picture slot="image-container">
+			<img
+				src="/assets/images/mehdi-photo.jpg"
+				alt="Astro Odyssee"
+				id="home-hero-image"
+			/>
+		</picture>
+	</TextAndImageHero>
+        
+
+ <div style="display: flex; justify-content: center; align-items: center; flex-direction: column; text-align: center;">
+    <h2 style=" margin-top:15px">¿Cuándo pedir ayuda?</h2>
+    <img
+        src="/assets/images/necesito_psico.jpg"
+        alt="Astro Odyssey"
+        loading="lazy"
+        style="max-width: 100%;"
+    />
+</div>
+    
+
+
+
+
+	
+
+  <StickyTextImageSection>
+    <div slot="text-container">
+      <h2 >Terapias y técnicas empleadas</h2>
+      <ul>
+        <li>Terapia Cognitivo-Conductual (TCC)</li>
+        <li>Terapia de Aceptación y Compromiso (ACT)</li>
+        <li>Terapia Humanista (Terapia Centrada en el Cliente)</li>
+        <li>Terapia de Grupo</li>
+        <li>Terapia Familiar y de Pareja</li>
+        <li>Terapia Breve</li>
+        <li>Terapia de Exposición</li>
+        <li>Terapia Sistémica</li>
+      </ul>
+
+
+    </div>
+     <picture slot="image-container" style="padding-top: 10%;">
+      <img
+        src="/assets/images/tecnicas.jpg"
+        alt="Astro Odyssey"
+        loading="lazy"
+        
+      />
+    </picture>
+  </StickyTextImageSection>
+
+   <div style="display: flex; justify-content: center; align-items: center; flex-direction: column; text-align: center;">
+    <h2 >Beneficios de ir al Psicólogo</h2>
+    <img
+        src="/assets/images/beneficio_psico.jpg"
+        alt="Astro Odyssey"
+        loading="lazy"
+        style="max-width: 100%;"
+    />
+</div>
+
+
+	<CustomerQuoteSection
+		quoteText="No existe el momento oportuno para hacer las cosas, simplemente hay que hacerlo en el momento que estas"
+		customerName="Anónimo"
+	/>
+<script src="https://apps.elfsight.com/p/platform.js" defer></script>
+<div class="elfsight-app-e124f02a-1816-4067-ad9b-9bff48408f55"></div>
+
+
+</Layout>
+
+
+<style>
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+ul li:before {
+
+    content: url('/assets/images/checklist.png');
+    margin:5px
+}
+li {
+    margin: 18px 0;
+}
+
+
+
+
+</style>

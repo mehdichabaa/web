@@ -1,0 +1,185 @@
+html,
+body {
+	height: 100%;
+}
+
+
+p {
+	text-align: justify;
+}
+
+body {
+	max-width: 1920px;
+	margin: 0 auto;
+	background-color: var(--theme-bg);
+	position: relative;
+}
+
+pre {
+  padding: 1em;
+  border-radius: 0.5em;
+  overflow: auto;
+}
+
+pre .language-id {
+  display: none;
+}
+
+:root {
+	--theme-announcement-background:hsl(0, 79%, 39%);
+}
+.announcement-banner__container {
+	background-color: white !important;
+	color: #25D366 !important;
+	
+  }
+
+
+#header, .footer-grid__container {
+	color: #fff;
+}
+.es-header-component-top {
+	background-color: #ffffff;
+	border-radius: 5px;
+}
+
+.es-review-background-container {
+	background-color: #ffffff !important;
+}
+
+
+
+
+.customer-quote__section {
+	color: #fff;
+}
+
+.footer-copyright__container {
+	display: none !important;
+}
+
+.footer-socials__list {
+	padding: 0 20px;
+}
+
+nav ul li a {
+
+    font-weight: bold;
+  }
+
+  footer {
+
+    min-height: 20vh;
+	margin-top:20px;
+  }
+
+  .footer-grid__container {
+    padding: 0vh 0 0 0;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr ;
+	
+  }
+
+  .announcement-banner__container p a:before {
+
+    content: url('/assets/images/whatsapp-logo.png');
+    margin:5px
+}
+.imageonlinepresencial{
+	padding-top:40%;
+}
+.footer-brand__container {
+    display: flex;
+    align-items: center;
+  }
+
+  .customer-quote__section p {
+	text-align: center;
+  } 
+
+  footer .content__container  {
+	margin-left: 100px !important;
+}
+
+  @media(max-width: 600px) {
+
+    .footer-grid__container {
+		padding: 5vh 0;
+		grid-template-columns: 1fr;
+		gap: 1rem;
+	  }
+
+	.header-nav__container ul {
+	  background-color: var(--theme-surface-1)
+	}
+
+	footer .content__container {
+		 margin-left: 0px !important; 
+	}
+	picture {
+		display: flex;
+		justify-content: center
+	}
+
+	.imageonlinepresencial{
+		padding-top:0px;
+	}
+	
+	#home-hero-image {
+		margin-bottom: 30px !important;
+	}
+
+#fasestitulo {
+	margin-top: -50px;
+}
+
+
+	.content_container  {
+		padding-top: 0px !important;
+	}
+
+	.contact-hero__section .contact-hero__text-section {
+		width: 350px !important;
+		
+	}
+	
+	.img-logo-footer {
+		margin-left: 50px !important;
+	}
+
+	.footer-brand__container div div .psico{
+		margin-left: 80px !important;
+	}
+
+	.footer-grid__container div {
+		display: flex !important;
+	justify-content: center !important;
+		align-items: center !important;
+	  }
+	}
+
+#menuButtonIconHam {
+	color:white !important;
+}
+
+#menuButtonIconClose {
+	color: white !important;
+}
+.content_container .accordion-wrapper .accordion .accordion-label {
+	background-color: var(--theme-surface-1);
+}
+
+.accordion-container .accordion-column .accordion-wrapper .accordion .accordion-label {
+	height: 90px;
+}
+
+.contact-hero__section .contact-hero__text-section {
+	width: 800px;
+	padding: 0 !important;
+	
+}
+
+footer {
+	border-top-left-radius: 0 !important; 
+     border-top-right-radius: 0 !important;
+}

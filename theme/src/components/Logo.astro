@@ -1,0 +1,75 @@
+---
+export interface Props {
+    footer?: boolean;
+}
+
+const { footer = false } = Astro.props;
+---
+{
+    footer ?
+<div style="display: flex;align-items: center; text-align: center;">
+    <a class="odyssey-logo-footer">
+        <img class="img-logo-footer" src="/assets/images/logoMehdi.png" alt="Mehdi Chabaa Psicólogo" />
+    </a><p class="psico" style="margin-left:40px">PSICOLOGÍA & ADICCIONES</p>
+
+</div>
+
+        
+    :
+        <a class="odyssey-logo">
+            <img class="img-logo" src="/assets/images/logoMehdi.png" alt="Mehdi Chabaa Psicólogo" />
+        </a> <p class="psico">PSICOLOGÍA & ADICCIONES</p>
+}
+
+
+<style>
+    .img-logo {
+        width: 110px;
+        display: inline;
+        
+    }
+
+    .img-logo-footer {
+        width: 200px;
+        display: inline;
+        max-width: 150%;
+        
+    }
+    .psico{
+        font-weight: bold;
+        margin: 0 0 0 0;
+
+    }
+	.odyssey-logo {
+		margin: 0;
+		font-family: var(--theme-font-family-serif);
+        font-size: var(--font-size-md);
+		color: inherit;
+        display: flex;
+        width: 130px;
+    }
+    .odyssey-logo-footer {
+        margin: 0;
+        font-family: var(--theme-font-family-serif);
+        font-size: var(--font-size-md);
+        color: inherit;
+        display: flex;
+        justify-content: center;
+        width: 125px;
+    }
+	.odyssey-logo:hover {
+		text-decoration: underline;
+		cursor: pointer;
+	}
+    @media(max-width: 600px) {
+        .odyssey-logo {
+            font-family: var(--theme-font-family-serif);
+            font-size: var(--font-size-md);
+            color: inherit;
+            display: flex;
+            width: 100%;
+            justify-content: center;
+            margin-left: -36px;
+        }
+    }
+</style>

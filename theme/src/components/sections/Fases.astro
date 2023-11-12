@@ -1,0 +1,175 @@
+---
+import { Container } from '@littlesticks/odyssey-theme-components';
+import TextAndImageHero from './heros/TextAndImageHero.astro';
+
+---
+
+
+
+ 
+
+              <h2  id="fasestitulo" >Fases de la terapia</h2>
+
+
+
+    <TextAndImageHero>
+    
+        <div slot="text-container">
+
+<div class="content_container">
+    <div class="accordion-wrapper">
+        <div class="accordion">
+    <input type="radio" name="radio-a" id="check1">
+    <label class="accordion-label" for="check1">Evaluación</label>
+    <div class="accordion-content">
+      <p>En las primeras sesiones, el objetivo principal es obtener datos importantes sobre el problema y el motivo de consulta que trae el paciente, esclareciendo el origen y lo que lo mantiene. Se analizan aspectos de personalidad, emocionales, comportamentales y relaciones interpersonales relacionados con el problema.</p>
+    </div>
+  </div>
+  <div class="accordion">
+    <input type="radio" name="radio-a" id="check2">
+    <label class="accordion-label" for="check2">Información</label>
+    <div class="accordion-content">
+      <p>Una vez esclarecido el motivo de consulta, recopilar y analizar la información, se llevará a cabo una devolución informativa, estableciéndose los primeros objetivos terapéuticos y las técnicas que se emplearán.</p>
+    </div>
+  </div>
+  <div class="accordion">
+    <input type="radio" name="radio-a" id="check3">
+    <label class="accordion-label" for="check3">Objetivos</label>
+    <div class="accordion-content">
+      <p>Una vez establecidos los primeros objetivos, se inicia la intervención con el propósito de capacitar al paciente para que adquiera las habilidades y estrategias necesarias para resolver sus problemas por sí mismo en el futuro. Se le brindará entrenamiento en el uso de técnicas que promuevan el cambio y la superación de los síntomas que lo llevaron a buscar ayuda profesional. El objetivo es proporcionar orientación, mejorar sus recursos de afrontamiento y desarrollar habilidades que le permitan avanzar de manera independiente.</p>
+    </div>
+  </div>
+  <div class="accordion">
+    <input type="radio" name="radio-a" id="check4">
+    <label class="accordion-label" for="check4">Intervención</label>
+    <div class="accordion-content">
+      <p>En esta fase, es esencial trabajar la prevención de recaídas, preparando al paciente para abordar eficazmente las dificultades que puedan surgir y representar un riesgo de recaída. También se realiza una evaluación posterior al tratamiento y se organizan las sesiones de seguimiento. El objetivo es preparar al paciente para que sea autosuficiente.</p>
+    </div>
+  </div>
+  <div class="accordion">
+    <input type="radio" name="radio-a" id="check5">
+    <label class="accordion-label" for="check5">Seguimiento</label>
+    <div class="accordion-content">
+      <p>En esta fase, el paciente ya tiene un conocimiento de sí mismo y recursos suficientes que le ayudan a comprender su propio pensamiento y cómo influye en sus emociones y comportamientos. Comprendiendo las razones detrás de su malestar y cómo aplicar las estrategias aprendidas durante las sesiones.</p>
+    </div>
+  </div>
+    </div>
+</div>
+        </div>
+        <picture slot="image-container">
+            <img
+                    src="/assets/images/metodo-fases.jpeg"
+                    alt="Astro Odyssee"
+                    id="home-hero-image"
+                    class="fasesimagen"
+            />
+        </picture>
+    </TextAndImageHero>
+
+
+
+
+<style>
+
+
+h2{
+    text-align:center;
+}
+input {
+    position: absolute;
+    opacity: 0;
+    z-index: -1;
+}
+.accordion-wrapper {
+    overflow: hidden;
+    box-shadow: 0 4px 4px -2px rgba(0, 0, 0, 0.5);
+    max-width: 600px;
+    margin: 0 auto 20px;
+}
+.accordion {
+    width: 100%;
+    color: white;
+    overflow: hidden;
+    margin-bottom: 16px;
+}
+.accordion:last-child{
+    margin-bottom: 0;
+}
+
+.accordion-label {
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    padding: 16px;
+    background: rgba(4,57,94,.8);
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 20px;
+}
+.accordion-label:hover {
+    background: rgba(4,57,94,1);
+}
+.accordion-label::after {
+    content: "\276F";
+    width: 16px;
+    height: 16px;
+    text-align: center;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+}
+.accordion-content {
+    max-height: 0;
+    padding: 0 16px;
+    color: rgba(4,57,94,1);
+    background: white;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+}
+.accordion-content p{
+    margin: 0;
+    color: rgba(4,57,94,.7);
+    font-size: 18px;
+}
+input:checked + .accordion-label {
+    background: rgba(4,57,94,1);
+}
+input:checked + .accordion-label::after {
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+input:checked ~ .accordion-content {
+    max-height: 100vh;
+    padding: 16px;
+}
+
+    /* Contenedor principal para el diseño con Grid */
+    .container {
+      display: grid;
+      grid-template-columns: 1fr 2fr; /* Columna para <h4> y columna para acordeones */
+      grid-gap: 10px; /* Espacio entre columnas */
+      align-items: center; /* Alinear elementos en la parte superior verticalmente */
+    }
+
+   
+    h1 {
+      margin: 0; /* Eliminar el margen predeterminado */
+    }
+
+
+
+    /* Estilos para dispositivos móviles */
+    @media screen and (max-width: 768px) {
+      .container {
+        grid-template-columns: 1fr; /* Cambiar a una sola columna en dispositivos móviles */
+      }
+    }
+
+    .content_container{
+      padding-top: 28px;
+    }
+  
+  .fasesimagen {
+    width: 90% !important;
+  }
+
+</style>

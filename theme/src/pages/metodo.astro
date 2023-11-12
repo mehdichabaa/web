@@ -1,0 +1,109 @@
+---
+import {Icon} from 'astro-icon'
+import {
+    AnnouncementBar,
+    Button,
+    CustomerQuoteSection,
+    ThreeColumnTextSection,
+    YouTubeEmbedSection,
+    StickyTextImageSection,
+    CtaCardSection
+} from '@littlesticks/odyssey-theme-components';
+import Layout from '../layouts/Page.astro';
+import TextAndImageHero from '../components/sections/heros/TextAndImageHero.astro';
+import FiveColumnTextSection from '../components/sections/FiveColumnTextSection.astro';
+import Fases from '../components/sections/Fases.astro';
+import Faqs from '../components/sections/Faqs.astro';
+
+const seo = {
+    title: 'Como trabajo',
+    description: 'Metodología de trabajo Psicología',
+};
+---
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+</head>
+
+<Layout seo={seo}>
+    <TextAndImageHero>
+        <div slot="text-container">
+            <h2 >¿Cómo trabajo?</h2>
+            <p>Mehdi Chabaa, Psicólogo Sanitario, inscrito en el Colegio
+Oficial de Psicólogos en Málaga, AO-12992.</p>
+            <p>En mis terapias de Psicología en Málaga encontraras un espacio
+seguro y confidencial. Utilizo un método de intervención
+altamente efectivo gracias a mi especialización. Tanto en terapia
+presencial como en terapia online, se trabajan las necesidades o
+dificultades emocionales, comprometiéndome con el bienestar
+de las personas.</p>
+        </div>
+        <picture slot="image-container">
+            <img
+                    src="/assets/images/metodo1.jpg"
+                    alt="Astro Odyssee"
+                    id="home-hero-image"
+            />
+        </picture>
+    </TextAndImageHero>
+
+    <StickyTextImageSection reversed>
+        <div slot="text-container">
+            <h2 >Terapias y técnicas empleadas</h2>
+            <h4>Terapia Cognitivo-Conductual (TCC):</h4>
+            <p>
+                Se centra en identificar y cambiar patrones de pensamiento negativo y comportamientos problemáticos. Es
+                efectiva para tratar trastornos como la depresión y la ansiedad.
+            </p>
+            <br>
+            <h4>Terapia de Aceptación y Compromiso (ACT):</h4>
+            <p>
+                Fomenta la aceptación de pensamientos y emociones difíciles, y ayuda a los pacientes a comprometerse con
+                valores y objetivos personales.
+            </p>
+            <br>
+            <h4>Terapia Humanista (Terapia Centrada en el Cliente):</h4>
+            <p>
+                Se enfoca en la autoexploración, el crecimiento personal y la autorrealización. Ayuda a los pacientes a
+                desarrollar su autoconciencia y autoaceptación.
+            </p>
+            <br>
+            <h4>Terapia de Grupo:</h4>
+            <p>
+                Los pacientes comparten experiencias y apoyo en un entorno grupal. Es efectiva para tratar una variedad
+                de problemas, incluyendo adicciones.
+            </p>
+            <br>
+            <h4>Terapia Familiar y de Pareja:</h4>
+            <p>
+                Se centra en las dinámicas y relaciones familiares o de pareja. Ayuda a resolver conflictos y mejorar la
+                comunicación.
+            </p>
+            <br>
+            <h4>Terapia Breve:</h4>
+            <p>
+                Se enfoca en abordar problemas específicos en un período de tiempo limitado. Es útil para resolver
+                crisis y problemas puntuales.
+            </p><br>
+            <h4>Terapia de Exposición: </h4>
+            <p>
+                Usada en el tratamiento de trastornos de ansiedad, implica enfrentar gradualmente situaciones temidas
+                para reducir la ansiedad.
+            </p>
+            <h4>Terapia Sistémica: </h4>
+            <p>
+                Considera al individuo en el contexto de su sistema familiar y social, examinando cómo estos sistemas
+                afectan la salud mental.
+            </p>
+        </div>
+        <picture slot="image-container">
+            <img
+                    src="/assets/images/metodo-tecnicas.jpg"
+                    alt="Astro Odyssey"
+                    loading="lazy"
+            />
+        </picture>
+    </StickyTextImageSection>
+
+    <Fases></Fases>
+</Layout>
+

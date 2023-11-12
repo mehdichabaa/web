@@ -1,0 +1,149 @@
+---
+import {Icon} from 'astro-icon'
+import {
+  AnnouncementBar,
+	Button,
+	CustomerQuoteSection,
+	ThreeColumnTextSection,
+	YouTubeEmbedSection,
+  StickyTextImageSection,
+  CtaCardSection
+} from '@littlesticks/odyssey-theme-components';
+import Layout from '../layouts/Page.astro';
+import TextAndImageHero from '../components/sections/heros/TextAndImageHero.astro';
+import FiveColumnTextSection from '../components/sections/FiveColumnTextSection.astro';
+import FiveCards from '../components/sections/FiveCards.astro';
+import ServiciosCards from '../components/sections/ServiciosCards.astro';
+import Faqs from '../components/sections/Faqs.astro';
+
+const seo = {
+	title: 'Psicologo Mehdi Chabaa',
+	description: 'Psicología en Málaga',
+};
+---
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	</head>
+
+<Layout seo={seo} >
+
+	
+<ServiciosCards></ServiciosCards>
+
+<div class="container_enfermedades">
+    <div class="titulo_main">Adicciones en general</div>
+    <div class="columnas">
+      <div class="columna">
+        <div class="titulo">Sustancias</div>
+        <ul class="lista">
+          <li>Alcohol</li>
+          <li>Cocaína</li>
+          <li>Marihuana</li>
+          <li>Anfetaminas</li>
+          <li>Benzodiacepinas</li>
+          <li>Ketamina</li>
+          <li>Fentanilo</li>
+        </ul>
+      </div>
+      <div class="columna">
+        <div class="titulo">Conductual</div>
+        <ul class="lista">
+          <li>Ludopatía / Juego patológico</li>
+          <li>Nuevas tecnologías</li>
+          <li>Compras compulsivas</li>
+          <li>Sexo</li>
+        </ul>
+      </div>
+    </div>
+
+
+<div class="titulo_main">Trastornos Psicológicos en general</div>
+    <div class="columnas">
+      <div class="columna">
+        <ul class="lista">
+      <li>Depresión</li>
+      <li>Ansiedad</li>
+      <li>Ansiedad Social</li>
+      <li>Ataques de Pánico</li>
+      <li>Fobias Específicas</li>
+      <li>Adaptación</li>
+      </div>
+      <div class="columna">
+        <ul class="lista">
+      <li>Obsesiones y compulsiones</li>
+      <li>Bipolaridad</li>
+      <li>Insomnio</li>
+      <li>Estrés</li>
+      <li>Personalidad</li>
+	    <li>Somáticos</li>
+      
+</div>
+  </div>
+</body>
+</html>
+
+<Faqs></Faqs>
+
+
+
+</Layout>
+
+  <style>
+    .container_enfermedades {
+      max-width: 800px;
+      margin: 100px auto;
+      margin-top:100px;
+      padding: 20px;
+    }
+
+    .titulo {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 10px;
+      text-align: center; /* Centro horizontalmente */
+    }
+	.titulo_main {
+      font-size: 42px;
+      font-weight: bold;
+      margin-bottom: 10px;
+      text-align: center; /* Centro horizontalmente */
+	  
+    }
+
+    .columnas {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center; /* Centro horizontalmente */
+    }
+
+    .columna {
+      width: 50%;
+      padding: 20px;
+      box-sizing: border-box;
+      text-align: center; /* Centro horizontalmente */
+    }
+
+    .lista {
+      margin-top: 0;
+      padding-left: 20px;
+      text-align: left; /* Alinea el texto a la izquierda */
+    }
+	ul li:before {
+list-style: none;
+    content: url('/assets/images/checklist.png');
+    margin:5px
+}
+	ul  {
+list-style: none;
+
+}
+
+@media (max-width: 768px) {
+  .columna {
+    flex: 0 0 100%; /* Hace que las columnas ocupen el 100% del ancho en dispositivos móviles */
+    margin-right: 0; /* Elimina el espacio entre columnas */
+    margin-bottom: 20px; /* Agrega espacio inferior entre las columnas */
+  }
+}
+
+  </style>

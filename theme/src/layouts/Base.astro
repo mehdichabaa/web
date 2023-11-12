@@ -1,0 +1,28 @@
+---
+import { SkipLink } from '@littlesticks/odyssey-theme-components';
+import BaseHead from '../components/head/BaseHead.astro';
+import type { Props as BaseHeadProps } from '../components/head/BaseHead.astro';
+
+export interface Props {
+	seo?: BaseHeadProps;
+}
+
+const { seo } = Astro.props;
+---
+
+<html lang="en">
+	<head>
+		<link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<BaseHead {...seo} />
+	</head>
+	<body>
+		<SkipLink />
+    <slot name="announcement-bar" />
+		<slot name="header" />
+		<main id="content">
+			<slot />
+		</main>
+		<slot name="footer" />
+	</body>
+</html>

@@ -1,0 +1,83 @@
+---
+import {Icon} from 'astro-icon'
+import {
+    AnnouncementBar,
+    Button,
+    CustomerQuoteSection,
+    ThreeColumnTextSection,
+    YouTubeEmbedSection,
+    StickyTextImageSection,
+    CtaCardSection
+} from '@littlesticks/odyssey-theme-components';
+import Layout from '../layouts/Page.astro';
+import TextAndImageHero from '../components/sections/heros/TextAndImageHero.astro';
+import FiveColumnTextSection from '../components/sections/FiveColumnTextSection.astro';
+import FiveCards from '../components/sections/FiveCards.astro';
+import Faqs from '../components/sections/Faqs.astro';
+
+const seo = {
+    title: 'Psicologo Online',
+    description: 'Mehchi Chabaa psicologo online',
+};
+---
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+</head>
+
+<Layout seo={seo}>
+    <TextAndImageHero>
+        <div slot="text-container">
+            <h1>Psicólogo Online</h1>
+            <p>En la actualidad, es posible recibir terapia con la misma efectividad que en sesiones presenciales. Ahora puedes programar citas con tu psicólogo online desde la comodidad de tu hogar. </p>
+        </div>
+        <picture slot="image-container">
+            <img
+                    src="/assets/images/psiconline.jpg"
+                    alt="Terapia online de psicologia"
+                    id="home-hero-image"
+            />
+        </picture>
+    </TextAndImageHero>
+
+    <StickyTextImageSection reversed>
+        <div slot="text-container">
+            <h2>¿Qué diferencia existe entre terapia online y presencial?</h2>
+            <br>
+            <p>
+La diferencia principal radica en el canal de comunicación utilizado con el paciente. En las sesiones el psicólogo online se basa en un programa completo de psicoterapia que capacita al cliente para abordar sus desafíos personales y experimentar un cambio genuino en su vida.
+            </p>
+            <br>
+            <h4>¿Por qué elegir un psicólogo online?</h4>
+            <p>
+Optar por un psicólogo online es una elección inteligente, ya que ahorra tiempo y proporciona una atención igual de efectiva que las sesiones presenciales. 
+Además, las terapias online a menudo crean un ambiente en el que los pacientes se sienten lo suficientemente cómodos como para abordar cualquier problema que les inquieta. Esto facilita encontrar soluciones de manera más eficiente para los desafíos que enfrentan.
+
+            </p>
+            <br>
+            <h4>¿Qué necesito para dar terapia online? </h4>
+            <ul style="text-align: justify;line-height: 2;">
+                <li>Contactar por teléfono, pedir una cita y establecer como se realizará el pago de la misma. </li>
+                <li>Para realizar la consulta online, comprueba que tengas una buena conexión de internet y que dispones de un ordenador o móvil con cámara y micrófono. Si tienes problemas en este paso, no te preocupes, te llamo y te ayudo.</li>
+                <li>Por último, escoge un lugar tranquilo y cómodo, donde se pueda hablar sin interrupciones.</li>
+            </ul>
+            
+        </div>
+        <picture slot="image-container" class ="imageonlinepresencial">
+            <img
+                    src="/assets/images/psiconline2.jpg"
+                    alt="Diferencia presencial y online"
+                    loading="lazy"
+            />
+        </picture>
+    </StickyTextImageSection>
+    <div style="display: flex;justify-content: center;">
+            <img
+                    src="/assets/images/psiconline3.jpg"
+                    alt="Astro Odyssey"
+                    loading="lazy"
+            />
+    </div>
+    <br>
+    <br>
+</Layout>
+

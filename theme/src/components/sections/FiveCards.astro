@@ -1,0 +1,102 @@
+---
+---
+
+<!-- Tienes que darle un diseño mejor a estas tablas, lo he alineado pero no me ha dado tiempo a mas
+consejos: mirar en codepen o internet diseños de card y copiarla ponerle tmb un h1 con un mensaje
+y alinearlo
+
+
+-->
+
+ <div class="card-container">
+    <div class="card">
+        <h2 class="card-title">Evaluación</h2>
+        <hr class="card-divider">
+        <p class="card-text">En las primeras sesiones, el objetivo principal es obtener datos importantes sobre el problema y el motivo de consulta que trae el paciente, esclareciendo el origen y lo que lo mantiene. Se analizan aspectos de personalidad, emocionales, comportamentales y relaciones interpersonales relacionados con el problema. </p>
+    </div>
+    <div class="card">
+        <h2 class="card-title">Información</h2>
+        <hr class="card-divider">
+        <p class="card-text">Una vez esclarecido el motivo de consulta, recopilar y analizar la información, se llevará a cabo una devolución informativa, estableciéndose los primeros objetivos terapéuticos y las técnicas que se emplearán.</p>
+    </div>
+    <div class="card">
+        <h2 class="card-title">Objetivos</h2>
+        <hr class="card-divider">
+        <p class="card-text">Una vez establecidos los primeros objetivos, se inicia la intervención con el propósito de capacitar al paciente para que adquiera las habilidades y estrategias necesarias para resolver sus problemas por sí mismo en el futuro. Se le brindará entrenamiento en el uso de técnicas que promuevan el cambio y la superación de los síntomas que lo llevaron a buscar ayuda profesional. El objetivo es proporcionar orientación, mejorar sus recursos de afrontamiento y desarrollar habilidades que le permitan avanzar de manera independiente.</p>
+    </div>
+    <div class="card">
+        <h2 class="card-title">Intervención</h2>
+        <hr class="card-divider">
+        <p class="card-text">En esta fase, es esencial trabajar la prevención de recaídas, preparando al paciente para abordar eficazmente las dificultades que puedan surgir y representar un riesgo de recaída. También se realiza una evaluación posterior al tratamiento y se organizan las sesiones de seguimiento. El objetivo es preparar al paciente para que sea autosuficiente.</p>
+    </div>
+    <div class="card">
+        <h2 class="card-title">Seguimiento</h2>
+        <hr class="card-divider">
+        <p class="card-text">En esta fase, el paciente ya tiene un conocimiento de sí mismo y recursos suficientes que le ayudan a comprender su propio pensamiento y cómo influye en sus emociones y comportamientos. Comprendiendo las razones detrás de su malestar y cómo aplicar las estrategias aprendidas durante las sesiones.</p>
+    </div>
+</div>
+
+
+
+<style>
+
+/* Estilos del componente de las Cards */
+.card-container {
+    margin: 0px 25px;
+    display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+   gap: 20px;
+    
+}
+
+.card {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 20px; /* Espacio entre las cards */
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.2s ease-in-out;
+    max-width: 400px; /* Ancho máximo de las cards en pantallas grandes */
+
+    &:hover {
+        transform: scale(1.05);
+    }
+
+    .card-title {
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+
+    .card-divider {
+        position: relative;
+        margin: 20px 0;
+
+        &::before {
+            content: "\2193"; /* Código de flecha hacia abajo */
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 24px;
+            color: #333;
+        }
+    }
+
+    .card-text {
+        font-size: 16px;
+        color: #333;
+    }
+}
+
+@media (max-width: 768px) {
+    .card-divider {
+        &::before {
+            display: none; /* Oculta la flecha en dispositivos móviles */
+        }
+    }
+}
+
+
+</style>

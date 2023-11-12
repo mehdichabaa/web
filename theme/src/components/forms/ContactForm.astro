@@ -1,0 +1,43 @@
+---
+import { Button, FormInput, FormSelect, FormTextarea } from '@littlesticks/odyssey-theme-components';
+
+const selectOptions = [
+  "Google Search",
+  "Social Media",
+  "Email",
+]
+
+---
+
+<form name="Contact Form" >
+  <label>Para solicitar cualquiera de los servicios de Mehdi Chabaa – Psicología & Adicciones, las personas interesadas podrán contactar a través de la dirección de correo electrónico   <a href="mailto:mehdi.chabaa.psi@gmail.com">mehdi.chabaa.psi@gmail.com</a>
+o al telefono 654778643</label>
+<div class="class-name"></div>
+  <label>Datos de contacto</label>
+<div class="class-name"></div>
+
+  <label>Mehdi Chabaa</label>
+  <a href="tel:0034654778643">654778643</a>
+  <a href="mailto:mehdi.chabaa.psi@gmail.com">mehdi.chabaa.psi@gmail.com</a>
+  <br>
+  <div class="class-name"></div>
+
+<label>Dirección</label>
+<div class="class-name"></div>
+
+<label>Calle Mauricio Moro Pareto 3, Planta 1, Puerta A. 29006 Málaga</label>
+</form>
+
+
+<style>
+  form {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  .class-name:after {
+    content: " ";
+    display: block;
+    border-bottom: 0.5px solid #9E9E9E;
+}
+</style>
